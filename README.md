@@ -88,3 +88,5 @@ Method getThaiFormalLongTime 13 นาฬิกา 43 นาที 40 วิน�
 
 This is [on GitHub](https://github.com/XeNoNZaa/node-datetime-thai) so let me know if I've broked it somewhere.
 
+## REFERENCE
+[ROYIN](http://www.royin.go.th/?page_id=10331) สำนักงานราชบัณฑิตยสภา
