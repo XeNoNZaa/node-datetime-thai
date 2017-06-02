@@ -59,7 +59,7 @@ Date.prototype.toThaiString = function (pattern_num) {
   /*
   minimal : 31 พ.ค. 2560
   partial : 31 พฤษภาคม 2560
-  maximum : วันพุธที่ 31 พฤษภาคม พ.ศ.2560
+  maximum : วันพุธ ที่ 31 พฤษภาคม พ.ศ.2560
   */
   pattern_num = pattern_num || thai_patterns.minimal;
   switch (pattern_num) {
@@ -70,7 +70,7 @@ Date.prototype.toThaiString = function (pattern_num) {
       return [this.getDate(), this.getThaiFullMonth(), this.getThaiYear()]
         .join(' ');
     case thai_patterns.maximum:
-      return ['วัน', this.getThaiFullDay(), 'ที่ ', this.getDate(), this.getThaiFullMonth(), 'พ.ศ.', this.getThaiYear()]
+      return 'วัน' + [this.getThaiFullDay(), 'ที่', this.getDate(), this.getThaiFullMonth(), 'พ.ศ.', this.getThaiYear()]
         .join(' ');
 
     default:

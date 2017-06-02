@@ -4,8 +4,6 @@ require('./../dist/dtthai.js');
 var Now = new Date();
 var thai_pattern = Now.getThaiPattern();
 
-
-
 console.log('Method', 'getThaiDay', Now.getThaiDay());
 console.log('Method', 'getThaiFullDay', Now.getThaiFullDay());
 
@@ -21,3 +19,7 @@ console.log('Method', 'toThaiString maximum', Now.toThaiString(thai_pattern.maxi
 console.log('Method', 'toThaiString minimal', Now.toThaiString(1));
 console.log('Method', 'toThaiString partial', Now.toThaiString(2));
 console.log('Method', 'toThaiString maximum', Now.toThaiString(3));
+
+console.log('Method', 'getThaiShortTime', Now.getThaiShortTime());
+console.log('Method', 'getThaiFormalShortTime', Now.getThaiFormalShortTime());
+console.log('Method', 'getThaiFormalLongTime', Now.getThaiFormalLongTime());
