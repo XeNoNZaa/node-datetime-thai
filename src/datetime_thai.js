@@ -62,26 +62,20 @@ Date.prototype.toThaiString = function (pattern_num) {
   maximum : วันพุธที่ 31 พฤษภาคม พ.ศ.2560
   */
   pattern_num = pattern_num || thai_patterns.minimal;
-
-  console.log()
   switch (pattern_num) {
     case thai_patterns.minimal:
-      return this.getDate() + ' ' +
-        this.getThaiMonth() + ' ' +
-        this.getThaiYear();
+      return [this.getDate(), this.getThaiMonth(), this.getThaiYear()]
+        .join(' ');
     case thai_patterns.partial:
-      return this.getDate() + ' ' +
-        this.getThaiFullMonth() + ' ' +
-        this.getThaiYear();
+      return [this.getDate(), this.getThaiFullMonth(), this.getThaiYear()]
+        .join(' ');
     case thai_patterns.maximum:
-      return 'วัน' + this.getThaiFullDay() + 'ที่ ' +
-        this.getDate() + ' ' +
-        this.getThaiFullMonth() + ' ' +
-        'พ.ศ.' + this.getThaiYear();
+      return ['วัน', this.getThaiFullDay(), 'ที่ ', this.getDate(), this.getThaiFullMonth(), 'พ.ศ.', this.getThaiYear()]
+        .join(' ');
+
     default:
-      return this.getDate() + ' ' +
-        this.getThaiMonth() + ' ' +
-        this.getThaiYear();
+      return [this.getDate(), this.getThaiMonth(), this.getThaiYear()]
+        .join(' ');
   }
 }
 
