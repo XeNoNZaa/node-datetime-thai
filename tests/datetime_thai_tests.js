@@ -1,6 +1,7 @@
 var chai = require('chai');
 var expect = chai.expect; // we are using the "expect" style of Chai
 require('./../src/datetime_thai');
+console.log('TESTING node-datetime-thai on', new Date().toThaiString(3));
 
 //'วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560'
 var newYear2017 = new Date('2017-01-01 08:00:00');
@@ -104,8 +105,8 @@ describe('Datetime for Thai (toThaiString)', function () {
   it('datetime.toThaiString should return "1 มกราคม 2560" if (thaiPattern.minimal) are passed in', function () {
     expect(newYear2017.toThaiString(thaiPattern.partial)).to.equal('1 มกราคม 2560');
   });
-  it('datetime.toThaiString should return "วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560" if (thaiPattern.minimal) are passed in', function () {
-    expect(newYear2017.toThaiString(thaiPattern.maximum)).to.equal('วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560');
+  it('datetime.toThaiString should return "วันอาทิตย์ ที่ 1 มกราคม พ.ศ. 2560" if (thaiPattern.minimal) are passed in', function () {
+    expect(newYear2017.toThaiString(thaiPattern.maximum)).to.equal('วันอาทิตย์ ที่ 1 มกราคม พ.ศ. 2560');
   });
 
   it('datetime.toThaiString should return "1 ม.ค. 2560" if (1) are passed in', function () {
@@ -115,11 +116,11 @@ describe('Datetime for Thai (toThaiString)', function () {
     expect(newYear2017.toThaiString(2)).to.equal('1 มกราคม 2560');
   });
   it('datetime.toThaiString should return "วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560" if (3) are passed in', function () {
-    expect(newYear2017.toThaiString(3)).to.equal('วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560');
+    expect(newYear2017.toThaiString(3)).to.equal('วันอาทิตย์ ที่ 1 มกราคม พ.ศ. 2560');
   });
 
   it('datetime.toThaiString + toLocaleTimeString  should return "วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560 08:00:00" if (3) are passed in', function () {
-    expect(newYear2017.toThaiString(3) + " " + newYear2017.toLocaleTimeString()).to.equal('วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560 08:00:00');
+    expect(newYear2017.toThaiString(3) + " " + newYear2017.toLocaleTimeString()).to.equal('วันอาทิตย์ ที่ 1 มกราคม พ.ศ. 2560 08:00:00');
   });
 });
 
