@@ -4,7 +4,9 @@
   "description": "Datetime prototype for thais locale",
   "main": "src/dtthai.js",
   "scripts": {
-    "test": "mocha tests --recursive --watch"
+    "test": "mocha tests --recursive",
+    "build": "npm test && uglifyjs ./src/*.js -mc -o ./dist/dtthai.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
     "THAI",
     "LANGUAGE"
   ],
-  "author": "XeNoNZaa <k.phisit@hotmail.com> (https://cv.otfuture.com)",
+  "author": "XeNoNZaa <publish@otfuture.com> (https://cv.otfuture.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/XeNoNZaa/node-datetime-thai/issues"
@@ -24,5 +26,6 @@
   "homepage": "https://github.com/XeNoNZaa/node-datetime-thai#readme",
   "devDependencies": {
     "chai": "^3.5.0"
-  }
+  },
+  "dependencies": {}
 }
