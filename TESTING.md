@@ -96,5 +96,5 @@ TESTING node-datetime-thai on วันศุกร์ ที่ 2 มิถุ�
     √ when time is 08:12:53 getThaiFormalShortTime should return "8 นาฬิกา 12 นาที 53 วินาที" 
 
 
-  82 passing (32ms)
+  82 passing (24ms)
 
