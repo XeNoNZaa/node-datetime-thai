@@ -1,6 +1,7 @@
 var chai = require('chai');
 var expect = chai.expect; // we are using the "expect" style of Chai
 require('./../src/datetime_thai');
+console.log('TESTING node-datetime-thai on', new Date().toThaiString(3));
 
 //'วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560'
 var newYear2017 = new Date('2017-01-01 08:00:00');
