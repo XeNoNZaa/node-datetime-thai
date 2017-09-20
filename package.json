@@ -5,8 +5,7 @@
   "main": "dist/dtthai.js",
   "scripts": {
     "test": "mocha tests --recursive",
-    "build": "npm test && mocha tests --recursive > TESTING.md && uglifyjs ./src/*.js -mc -o ./dist/dtthai.js",
-    "prepublish": "npm run build"
+    "build": "npm test && mocha tests --recursive > TESTING.md && uglifyjs ./src/*.js -mc -o ./dist/dtthai.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,9 @@
   },
   "homepage": "https://github.com/XeNoNZaa/node-datetime-thai#readme",
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "mocha": "^3.5.3",
+    "uglifyjs": "^2.4.11"
   },
   "dependencies": {}
 }
