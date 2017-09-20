@@ -1,4 +1,5 @@
 # (npm) node-datetime-thai
+[![Build Status](https://travis-ci.org/XeNoNZaa/node-datetime-thai.svg?branch=master)](https://travis-ci.org/XeNoNZaa/node-datetime-thai)
 
 ฟิเจอร์พื้นฐานสำหรับการใช้งาน:
 
