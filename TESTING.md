@@ -1,4 +1,4 @@
-TESTING node-datetime-thai on วันศุกร์ ที่ 2 มิถุนายน พ.ศ. 2560
+TESTING node-datetime-thai on วันพุธ ที่ 20 กันยายน พ.ศ. 2560
 
 
   Datetime for Thai (Static pattern)
@@ -96,5 +96,5 @@ TESTING node-datetime-thai on วันศุกร์ ที่ 2 มิถุ�
     √ when time is 08:12:53 getThaiFormalShortTime should return "8 นาฬิกา 12 นาที 53 วินาที" 
 
 
-  82 passing (31ms)
+  82 passing (25ms)
 
