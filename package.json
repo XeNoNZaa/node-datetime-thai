@@ -1,11 +1,12 @@
 {
   "name": "node-datetime-thai",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Datetime prototype for thais locale",
   "main": "dist/dtthai.js",
   "scripts": {
     "test": "mocha tests --recursive > TESTING.md",
-    "build": "npm test && uglifyjs ./src/*.js -mc -o ./dist/dtthai.js"
+    "build": "npm test && uglifyjs ./src/*.js -mc -o ./dist/dtthai.js",
+    "publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,7 @@
   "homepage": "https://github.com/XeNoNZaa/node-datetime-thai#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.5.3",
-    "uglifyjs": "^2.4.11"
+    "mocha": "^3.5.3"
   },
   "dependencies": {}
 }
