@@ -1,12 +1,11 @@
 {
   "name": "node-datetime-thai",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Datetime prototype for thais locale",
   "main": "dist/dtthai.js",
   "scripts": {
     "test": "mocha tests --recursive > TESTING.md",
-    "build": "npm test && uglifyjs ./src/*.js -mc -o ./dist/dtthai.js",
-    "publish": "npm run build && npm publish"
+    "build": "npm test && uglifyjs ./src/*.js -mc -o ./dist/dtthai.js"
   },
   "repository": {
     "type": "git",
