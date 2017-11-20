@@ -1,39 +1,42 @@
-# (npm) node-datetime-thai
+# (npm) node-datetime-thai #
+
 [![Build Status](https://travis-ci.org/XeNoNZaa/node-datetime-thai.svg?branch=master)](https://travis-ci.org/XeNoNZaa/node-datetime-thai) 
 [![Coverage Status](https://coveralls.io/repos/github/XeNoNZaa/node-datetime-thai/badge.svg?branch=master)](https://coveralls.io/github/XeNoNZaa/node-datetime-thai?branch=master)
 
 ฟิเจอร์พื้นฐานสำหรับการใช้งาน:
 
- * สำหรับการดึงข้อมูลวันที่ เวลา เป็นภาษาไทย
- * วันจันทร์ - อาทิตย์
- * เดือนมกราคม - ธันวาคม
- * ปี พ.ศ. (ค.ศ. + 543)
+* สำหรับการดึงข้อมูลวันที่ เวลา เป็นภาษาไทย
+* วันจันทร์ - อาทิตย์
+* เดือนมกราคม - ธันวาคม
+* ปี พ.ศ. (ค.ศ. + 543)
 
-## การติดตั้ง - Install
+## การติดตั้ง - Install ##
+
 This is [on npm](https://www.npmjs.com/package/node-datetime-thai).
 
 ```node
 npm install --save node-datetime-thai
 ```
 
-## การประกาศใช้งาน - Initial
+## การประกาศใช้งาน - Initial ##
 
 ```javascript
 require('node-datetime-thai');
 ```
 
 ## Method Available
- * getThaiPattern
- * getThaiDay
- * getThaiFullDay
- * getThaiMonth
- * getThaiFullMonth
- * getThaiYear
- * getThaiFullDay
- * toThaiString
- * getThaiShortTime
- * getThaiFormalShortTime
- * getThaiFormalLongTime
+
+* getThaiPattern
+* getThaiDay
+* getThaiFullDay
+* getThaiMonth
+* getThaiFullMonth
+* getThaiYear
+* getThaiFullDay
+* toThaiString
+* getThaiShortTime
+* getThaiFormalShortTime
+* getThaiFormalLongTime
 
 And here's some code! :+1:
 
@@ -42,7 +45,8 @@ var Now = new Date();
 console.log('Method', 'getThaiDay', Now.getThaiDay());
 ```
 
-## example
+## example ##
+
 ```javascript
 require('./../dist/dtthai.js');
 
@@ -69,7 +73,9 @@ console.log('Method', 'getThaiShortTime', Now.getThaiShortTime());
 console.log('Method', 'getThaiFormalShortTime', Now.getThaiFormalShortTime());
 console.log('Method', 'getThaiFormalLongTime', Now.getThaiFormalLongTime());
 ```
-##### Result
+
+##### Result ####
+
 ```
 Method getThaiDay ศ
 Method getThaiFullDay ศุกร์
@@ -90,5 +96,6 @@ Method getThaiFormalLongTime 13 นาฬิกา 43 นาที 40 วิน�
 
 This is [on GitHub](https://github.com/XeNoNZaa/node-datetime-thai) so let me know if I've broked it somewhere.
 
-## REFERENCE
+## REFERENCE ##
+
 [ROYIN](http://www.royin.go.th/?page_id=10331) สำนักงานราชบัณฑิตยสภา
