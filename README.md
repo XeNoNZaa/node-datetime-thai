@@ -1,5 +1,6 @@
 # (npm) node-datetime-thai
-[![Build Status](https://travis-ci.org/XeNoNZaa/node-datetime-thai.svg?branch=master)](https://travis-ci.org/XeNoNZaa/node-datetime-thai)
+[![Build Status](https://travis-ci.org/XeNoNZaa/node-datetime-thai.svg?branch=master)](https://travis-ci.org/XeNoNZaa/node-datetime-thai) 
+[![Coverage Status](https://coveralls.io/repos/github/XeNoNZaa/node-datetime-thai/badge.svg?branch=master)](https://coveralls.io/github/XeNoNZaa/node-datetime-thai?branch=master)
 
 ฟิเจอร์พื้นฐานสำหรับการใช้งาน:
 
