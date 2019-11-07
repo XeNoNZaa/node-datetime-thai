@@ -1,4 +1,4 @@
-let _str_day = {
+var str_day = {
   ABB: [
     'อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'
   ],
@@ -13,7 +13,7 @@ let _str_day = {
   ]
 }
 
-let _str_month = {
+var str_month = {
   ABB: [
     'ม.ค.',
     'ก.พ.',
@@ -44,7 +44,7 @@ let _str_month = {
   ]
 }
 
-let thai_patterns = {
+var thai_patterns = {
   'minimal': 1,
   'partial': 2,
   'maximum': 3
@@ -78,28 +78,31 @@ Date.prototype.toThaiString = function (pattern_num) {
 }
 
 Date.prototype.getThaiDay = function () {
-  return _str_day.ABB[this.getDay()];
+  return str_day.ABB[this.getDay()];
 }
 Date.prototype.getThaiFullDay = function () {
-  return _str_day.FULL[this.getDay()];
+  return str_day.FULL[this.getDay()];
 }
 
 Date.prototype.getThaiMonth = function () {
-  return _str_month.ABB[this.getMonth()];
+  return str_month.ABB[this.getMonth()];
 }
 Date.prototype.getThaiFullMonth = function () {
-  return _str_month.FULL[this.getMonth()];
+  return str_month.FULL[this.getMonth()];
 }
 
 Date.prototype.getThaiYear = function () {
   return this.getFullYear() + 543;
 }
 
-Date.prototype.getThaiShortTime = function () {
-  let seperator = seperator || ' ';
-  let hour = this.getHours();
-  let minute = this.getMinutes();
-  let result = [];
+/***
+ * @param {string} seperator Seperator between terms
+ */
+Date.prototype.getThaiShortTime = function (seperator) {
+  seperator = seperator || ' ';
+  var hour = this.getHours();
+  var minute = this.getMinutes();
+  var result = [];
 
   //Read Hour
   if (hour == 0) {
@@ -156,12 +159,15 @@ Date.prototype.getThaiShortTime = function () {
   return result.join(seperator);
 }
 
-Date.prototype.getThaiFormalShortTime = function () {
-  let seperator = seperator || ' ';
-  let hour = this.getHours();
-  let minute = this.getMinutes();
-  let second = this.getSeconds();
-  let result = [];
+/***
+ * @param {string} seperator Seperator between terms
+ */
+Date.prototype.getThaiFormalShortTime = function (seperator) {
+  seperator = seperator || ' ';
+  var hour = this.getHours();
+  var minute = this.getMinutes();
+  var second = this.getSeconds();
+  var result = [];
 
   result.push(hour);
   result.push('นาฬิกา');
@@ -178,12 +184,15 @@ Date.prototype.getThaiFormalShortTime = function () {
   return result.join(seperator);
 }
 
-Date.prototype.getThaiFormalLongTime = function () {
-  let seperator = seperator || ' ';
-  let hour = this.getHours();
-  let minute = this.getMinutes();
-  let second = this.getSeconds();
-  let result = [];
+/***
+ * @param {string} seperator Seperator between terms
+ */
+Date.prototype.getThaiFormalLongTime = function (seperator) {
+  seperator = seperator || ' ';
+  var hour = this.getHours();
+  var minute = this.getMinutes();
+  var second = this.getSeconds();
+  var result = [];
 
   result.push(hour);
   result.push('นาฬิกา');
