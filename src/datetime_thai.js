@@ -1,6 +1,4 @@
-'use strict'
-
-var _str_day = {
+let _str_day = {
   ABB: [
     'อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'
   ],
@@ -15,7 +13,7 @@ var _str_day = {
   ]
 }
 
-var _str_month = {
+let _str_month = {
   ABB: [
     'ม.ค.',
     'ก.พ.',
@@ -41,12 +39,12 @@ var _str_month = {
     'สิงหาคม',
     'กันยายน',
     'ตุลาคม',
-    'พฤษจิกายน',
+    'พฤศจิกายน',
     'ธันวาคม',
   ]
 }
 
-var thai_patterns = {
+let thai_patterns = {
   'minimal': 1,
   'partial': 2,
   'maximum': 3
@@ -98,10 +96,10 @@ Date.prototype.getThaiYear = function () {
 }
 
 Date.prototype.getThaiShortTime = function () {
-  var seperator = seperator || ' ';
-  var hour = this.getHours();
-  var minute = this.getMinutes();
-  var result = [];
+  let seperator = seperator || ' ';
+  let hour = this.getHours();
+  let minute = this.getMinutes();
+  let result = [];
 
   //Read Hour
   if (hour == 0) {
@@ -159,11 +157,11 @@ Date.prototype.getThaiShortTime = function () {
 }
 
 Date.prototype.getThaiFormalShortTime = function () {
-  var seperator = seperator || ' ';
-  var hour = this.getHours();
-  var minute = this.getMinutes();
-  var second = this.getSeconds();
-  var result = [];
+  let seperator = seperator || ' ';
+  let hour = this.getHours();
+  let minute = this.getMinutes();
+  let second = this.getSeconds();
+  let result = [];
 
   result.push(hour);
   result.push('นาฬิกา');
@@ -181,11 +179,11 @@ Date.prototype.getThaiFormalShortTime = function () {
 }
 
 Date.prototype.getThaiFormalLongTime = function () {
-  var seperator = seperator || ' ';
-  var hour = this.getHours();
-  var minute = this.getMinutes();
-  var second = this.getSeconds();
-  var result = [];
+  let seperator = seperator || ' ';
+  let hour = this.getHours();
+  let minute = this.getMinutes();
+  let second = this.getSeconds();
+  let result = [];
 
   result.push(hour);
   result.push('นาฬิกา');
