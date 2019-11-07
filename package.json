@@ -1,6 +1,6 @@
 {
   "name": "node-datetime-thai",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Datetime prototype for thais locale",
   "main": "dist/dtthai.js",
   "scripts": {

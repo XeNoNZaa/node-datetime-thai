@@ -118,10 +118,6 @@ describe('Datetime for Thai (toThaiString)', function () {
   it('datetime.toThaiString should return "วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560" if (3) are passed in', function () {
     expect(newYear2017.toThaiString(3)).to.equal('วันอาทิตย์ ที่ 1 มกราคม พ.ศ. 2560');
   });
-
-  it('datetime.toThaiString + toLocaleTimeString  should return "วันอาทิตย์ที่ 1 มกราคม พ.ศ.2560 08:00:00" if (3) are passed in', function () {
-    expect(newYear2017.toThaiString(3) + " " + newYear2017.toLocaleTimeString()).to.equal('วันอาทิตย์ ที่ 1 มกราคม พ.ศ. 2560 08:00:00');
-  });
 });
 
 describe('Datetime for Thai (getThaiShortTime)', function () {
