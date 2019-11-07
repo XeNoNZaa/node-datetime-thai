@@ -1,6 +1,4 @@
-'use strict'
-
-var _str_day = {
+var str_day = {
   ABB: [
     'อา', 'จ', 'อ', 'พ', 'พฤ', 'ศ', 'ส'
   ],
@@ -15,7 +13,7 @@ var _str_day = {
   ]
 }
 
-var _str_month = {
+var str_month = {
   ABB: [
     'ม.ค.',
     'ก.พ.',
@@ -41,7 +39,7 @@ var _str_month = {
     'สิงหาคม',
     'กันยายน',
     'ตุลาคม',
-    'พฤษจิกายน',
+    'พฤศจิกายน',
     'ธันวาคม',
   ]
 }
@@ -80,25 +78,28 @@ Date.prototype.toThaiString = function (pattern_num) {
 }
 
 Date.prototype.getThaiDay = function () {
-  return _str_day.ABB[this.getDay()];
+  return str_day.ABB[this.getDay()];
 }
 Date.prototype.getThaiFullDay = function () {
-  return _str_day.FULL[this.getDay()];
+  return str_day.FULL[this.getDay()];
 }
 
 Date.prototype.getThaiMonth = function () {
-  return _str_month.ABB[this.getMonth()];
+  return str_month.ABB[this.getMonth()];
 }
 Date.prototype.getThaiFullMonth = function () {
-  return _str_month.FULL[this.getMonth()];
+  return str_month.FULL[this.getMonth()];
 }
 
 Date.prototype.getThaiYear = function () {
   return this.getFullYear() + 543;
 }
 
-Date.prototype.getThaiShortTime = function () {
-  var seperator = seperator || ' ';
+/***
+ * @param {string} seperator Seperator between terms
+ */
+Date.prototype.getThaiShortTime = function (seperator) {
+  seperator = seperator || ' ';
   var hour = this.getHours();
   var minute = this.getMinutes();
   var result = [];
@@ -158,8 +159,11 @@ Date.prototype.getThaiShortTime = function () {
   return result.join(seperator);
 }
 
-Date.prototype.getThaiFormalShortTime = function () {
-  var seperator = seperator || ' ';
+/***
+ * @param {string} seperator Seperator between terms
+ */
+Date.prototype.getThaiFormalShortTime = function (seperator) {
+  seperator = seperator || ' ';
   var hour = this.getHours();
   var minute = this.getMinutes();
   var second = this.getSeconds();
@@ -180,8 +184,11 @@ Date.prototype.getThaiFormalShortTime = function () {
   return result.join(seperator);
 }
 
-Date.prototype.getThaiFormalLongTime = function () {
-  var seperator = seperator || ' ';
+/***
+ * @param {string} seperator Seperator between terms
+ */
+Date.prototype.getThaiFormalLongTime = function (seperator) {
+  seperator = seperator || ' ';
   var hour = this.getHours();
   var minute = this.getMinutes();
   var second = this.getSeconds();
